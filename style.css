@@ -229,3 +229,8 @@ main {
     display: flex;
     justify-content: center;
 }
+
+.cards-flex {
+    display: flex;
+    justify-content: center;
+}
