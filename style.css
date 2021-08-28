@@ -229,3 +229,65 @@ main {
     display: flex;
     justify-content: center;
 }
+
+
+.services-content {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services-circle {
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid#41228E;
+    z-index: 2;
+    left: 10%;
+}
+
+.services-triangle {
+    margin: 0 auto;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid gray;
+    z-index: 1;
+}
+
+.services-ui {
+    width: 370px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-active {
+    background-color: #41228E;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.services-ui h2 {
+    padding: 50px 0 25px ;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.services-ui p {
+    width: 70%;
+    padding: 0 15px;
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    opacity: .7;
+}
