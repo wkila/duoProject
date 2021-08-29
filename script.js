@@ -127,7 +127,7 @@ function setPage(index) {
 }
 
 // scroll anim
-// TODO ПОФИКСИТЬ БАГ С ТАЙМАУТОМ
+// ахуеть как это работает вообще?
 
 const windowHeight = window.innerHeight
 
@@ -160,8 +160,8 @@ document.addEventListener('scroll', () => {
         let contextHeight = anim.getBoundingClientRect().top
         let dataName = anim.dataset.anim
         if ((contextHeight - windowHeight) / 2 < windowHeight / 6 && !anim.classList.contains(`${dataName}`)) {
-            anim.classList.remove(`${detectAnim(dataName)}`)
             anim.classList.add(`${dataName}`)
+            anim.classList.remove(`${detectAnim(dataName)}`)
         }
     }
 })

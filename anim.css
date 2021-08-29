@@ -4,23 +4,23 @@
 }
 
 .left {
-    animation: leftAnim 1s linear;
     transition: all 1s linear;
+    transform: translateX(0);
 }
 
 .right {
-    animation: rightAnim 1s linear;
     transition: all 1s linear;
+    transform: translateX(0);
 }
 
 .bottom {
-    animation: bottomAnim 1s linear;
     transition: all 1s linear;
+    transform: translateY(0);
 }
 
 .top {
-    animation: topAnim 1s linear;
     transition: all 1s linear;
+    transform: translateY(0);
 }
 
 .topTranslate {
@@ -41,34 +41,5 @@
 .rightTranslate {
     transform: translateX(550px);
     opacity: 0;
-}
-
-
-@keyframes leftAnim {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes rightAnim {
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes bottomAnim {
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes topAnim {
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
