@@ -32,7 +32,7 @@ for (const section of sections) {
     })
 }
 
-// перемещение табов
+// changin img
 
 draggbles.forEach((element) => {
     element.addEventListener('dragstart', dragStart)
@@ -85,6 +85,7 @@ function dragDrop(event) {
         dragThis.innerHTML = this.innerHTML;
         this.innerHTML = event.dataTransfer.getData('img/html');
     }
+    this.classList.remove('over')
     
     return false;
 }
