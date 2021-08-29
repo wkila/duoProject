@@ -323,14 +323,6 @@ main {
     grid-auto-rows: 280px;
 }
 
-.block-img {
-    border-radius: 10px;
-    background-color: #BFABF0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .content-section {
     padding-top: 90px;
     width: 60%;
@@ -390,4 +382,37 @@ main {
     transition: flex .5s linear;
 }
 
+.drag {
+    border-radius: 10px;
+    background-color: #BFABF0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: grab;
+    transition: transform .3s linear;
+}
 
+.drag img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.drag:active {
+    position: relative;
+    cursor: grabbing;
+}
+
+.active-move {
+    cursor: move;
+    border: 10px solid rgb(244, 255, 214);
+}
+
+.over {
+    border: 1px solid black;
+}
+
+.hide {
+    transform: scale(0.8);
+    transition: transform .3s linear;
+}
