@@ -1,6 +1,8 @@
 const sections = document.querySelectorAll('.services-ui'),
     tabs = document.querySelectorAll('.tab'),
-    draggbles = document.querySelectorAll('.drag')
+    draggbles = document.querySelectorAll('.drag'),
+    pages = document.querySelectorAll('.content-section'),
+    content = document.querySelector('.widthStandart').clientWidth
 
 let methods = {
     classes: {
@@ -27,13 +29,6 @@ for (const section of sections) {
     section.addEventListener('click', () => {
         section.classList.add(`${methods.searchPos('services-ui')}`)
         methods.deleteClass(section, 'services-ui')
-    })
-}
-
-for (const tab of tabs) {
-    tab.addEventListener('click', () => {
-        tab.classList.add(`${methods.searchPos('tab')}`)
-        methods.deleteClass(tab, 'tab')
     })
 }
 
@@ -92,4 +87,46 @@ function dragDrop(event) {
     }
     
     return false;
+}
+
+
+// switch content
+
+for (let i = 0; i < pages.length; i++) {
+    if (i !== 0) {
+        pages[i].style.transform = `translateX(${content}px)`
+    }
+}
+
+// for (const tab of tabs) {
+//     tab.addEventListener('click', () => {
+//         tab.classList.add(`${methods.searchPos('tab')}`)
+//         methods.deleteClass(tab, 'tab')
+//     })
+// }
+
+let activePage = 0
+
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', () => {
+        tabs[i].classList.add(methods.searchPos('tab'))
+        setPage(i)
+        methods.deleteClass(tabs[i], 'tab')
+    })
+}
+
+function setPage(index) { 
+    for (let i = 0; i < pages.length;i++) {
+        if (index === i) {
+            if (index > activePage) {
+                pages[activePage].style.transform = `translateX(-${content}px)`
+                pages[i].style.transform = `translateX(${0}px)`
+                activePage = index
+            }else if (index < activePage){
+                pages[activePage].style.transform = `translateX(${content}px)`
+                pages[i].style.transform = `translateX(${0}px)`
+                activePage = index
+            }
+        }
+    }
 }
