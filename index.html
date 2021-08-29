@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="anim.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -45,7 +46,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 <a href="">Know more</a>
             </section>
-            <section class="skills">
+            <section class="skills jammer" data-anim="left">
                 <h1 class="title">Skills</h1>
                 <div class="blocks">
                     <div class="block">
@@ -66,7 +67,7 @@
                     </div>
                 </div>
             </section>
-            <section class="standart-section">
+            <section class="standart-section jammer" data-anim="right">
                 <div class="title-block">
                     <h1 class="title">Education</h1>
                 </div>
@@ -107,7 +108,7 @@
                     </div>
                 </div>
             </section>
-            <section class="standart-section">
+            <section class="standart-section jammer" data-anim="left">
                 <div class="title-block">
                     <h1 class="title">Services</h1>
                 </div>
@@ -129,10 +130,8 @@
                     </div>
                 </div>
             </section>
-            <section class="standart-section" style="display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;">
+            <section class="standart-section jammer" style="display: flex;justify-content: center;flex-direction: column;
+            align-items: center;" data-anim="right">
                 <div class="title-block">
                     <h1 class="title">Portfolio</h1>
                 </div>
@@ -145,7 +144,7 @@
                 </div>
             </section>
         </main>
-        <section class="standart-section widthStandart" style="background-image: url('img/bg-section.png');margin-top: 175px;">
+        <section class="standart-section widthStandart jammer" data-anim="bottom" style="background-image: url('img/bg-section.png');margin-top: 175px;">
             <div class="content-section absolute">
                 <div class="title-block">
                     <h1 class="title" style="color: #fff;">Testimonials</h1>
@@ -197,7 +196,7 @@
                 <div class="tab"></div>
             </div>
         </section>
-        <section class="standart-section">
+        <section class="standart-section jammer" data-anim="left">
             <div class="sponsors">
                 <img src="img/logo-1.svg" alt="">
                 <img src="img/logo-2.svg" alt="">
@@ -206,7 +205,7 @@
                 <img src="img/logo-5.svg" alt="">
             </div>
         </section>
-        <section class="standart-section">
+        <section class="standart-section jammer" data-anim="right">
             <div class="blogs">
                 <h1 class="title">Blogs</h1>
                 <div class="blogs-content">
@@ -233,7 +232,7 @@
                 </div>
             </div>
         </section>
-        <section class="standart-section">
+        <section class="standart-section jammer" data-anim="left">
             <div class="title-block">
                 <h1 class="title">Contact Info</h1>
             </div>

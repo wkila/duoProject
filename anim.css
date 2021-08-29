@@ -1,0 +1,74 @@
+
+.container {
+    overflow: hidden;
+}
+
+.left {
+    animation: leftAnim 1s linear;
+    transition: all 1s linear;
+}
+
+.right {
+    animation: rightAnim 1s linear;
+    transition: all 1s linear;
+}
+
+.bottom {
+    animation: bottomAnim 1s linear;
+    transition: all 1s linear;
+}
+
+.top {
+    animation: topAnim 1s linear;
+    transition: all 1s linear;
+}
+
+.topTranslate {
+    transform: translateY(-550px);
+    opacity: 0;
+}
+
+.bottomTranslate {
+    transform: translateY(550px);
+    opacity: 0;
+}
+
+.leftTranslate {
+    transform: translateX(-550px);
+    opacity: 0;
+}
+
+.rightTranslate {
+    transform: translateX(550px);
+    opacity: 0;
+}
+
+
+@keyframes leftAnim {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightAnim {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bottomAnim {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topAnim {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

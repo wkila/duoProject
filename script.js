@@ -2,7 +2,8 @@ const sections = document.querySelectorAll('.services-ui'),
     tabs = document.querySelectorAll('.tab'),
     draggbles = document.querySelectorAll('.drag'),
     pages = document.querySelectorAll('.content-section'),
-    content = document.querySelector('.widthStandart').clientWidth
+    content = document.querySelector('.widthStandart').clientWidth,
+    animBlocks = document.querySelectorAll('.jammer')
 
 let methods = {
     classes: {
@@ -124,3 +125,43 @@ function setPage(index) {
         }
     }
 }
+
+// scroll anim
+// TODO ПОФИКСИТЬ БАГ С ТАЙМАУТОМ
+
+const windowHeight = window.innerHeight
+
+const positions = {
+    'top': 'topTranslate',
+    'bottom': 'bottomTranslate',
+    'left': 'leftTranslate',
+    'right': 'rightTranslate'
+}
+
+for (jammer of animBlocks) {
+    let dataName = jammer.dataset.anim
+    for (let key in positions) {
+        if (dataName === key) {
+            jammer.classList.add(positions[key])
+        }
+    }
+}
+
+function detectAnim(dataName) {
+    for (let key in positions) {
+        if (dataName === key) {
+            return positions[key]
+        }
+    }
+}
+
+document.addEventListener('scroll', () => {
+    for (anim of animBlocks) {
+        let contextHeight = anim.getBoundingClientRect().top
+        let dataName = anim.dataset.anim
+        if ((contextHeight - windowHeight) / 2 < windowHeight / 6 && !anim.classList.contains(`${dataName}`)) {
+            anim.classList.remove(`${detectAnim(dataName)}`)
+            anim.classList.add(`${dataName}`)
+        }
+    }
+})
