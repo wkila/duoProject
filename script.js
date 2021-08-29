@@ -24,14 +24,14 @@ let methods = {
 
 for (const section of sections) {
     section.addEventListener('click', () => {
-        section.classList.add('services-active')
+        section.classList.add(`${methods.searchPos('services-ui')}`)
         methods.deleteClass(section, 'services-ui')
     })
 }
 
 for (const tab of tabs) {
     tab.addEventListener('click', () => {
-        tab.classList.add('active-tab')
+        tab.classList.add(`${methods.searchPos('tab')}`)
         methods.deleteClass(tab, 'tab')
     })
 }
