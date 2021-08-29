@@ -98,13 +98,6 @@ for (let i = 0; i < pages.length; i++) {
     }
 }
 
-// for (const tab of tabs) {
-//     tab.addEventListener('click', () => {
-//         tab.classList.add(`${methods.searchPos('tab')}`)
-//         methods.deleteClass(tab, 'tab')
-//     })
-// }
-
 let activePage = 0
 
 for (let i = 0; i < tabs.length; i++) {
