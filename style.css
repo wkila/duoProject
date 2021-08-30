@@ -532,8 +532,9 @@ main {
     grid-row-gap: 50px;
 }
 
-.container-form input {
+.block-input input {
     padding-top: 10px;
+    width: 100%;
     padding-bottom: 10px;
     border: none;
     border-bottom: 2px solid #707070;
@@ -541,6 +542,7 @@ main {
 
 textarea {
     border: none;
+    width: 100%;
     resize: none;
     border-bottom: 2px solid #707070;
     height: 170px;
@@ -586,3 +588,6 @@ footer {
     padding-top: 60px;
 }
 
+.error-span {
+    color: rgb(255, 91, 91);
+}

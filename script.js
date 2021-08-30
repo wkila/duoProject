@@ -165,3 +165,42 @@ document.addEventListener('scroll', () => {
         }
     }
 })
+
+// написание ошибок
+
+const textErrors = document.querySelectorAll('.error-span'),
+    inputs = document.querySelectorAll('.input'),
+    textArea = document.querySelector('.textArea')
+
+const errors = ['name', 'email', 'textar']
+const dictionary = {
+    'name': 'имя',
+    'email': 'ИМЭЙЛ ГЫГЫ ИМЭЙЛ'
+}
+
+function checkError(input) {
+    for (let key of errors) {
+        if (input.classList.contains(key)) {
+            return key
+        }
+    }
+}
+
+function checkDick(valueName) {
+    for (let key in dictionary) {
+        if (valueName === key) {
+            return dictionary[key]
+        }
+    }
+}
+
+for (let input of inputs) {
+    input.addEventListener('change', (event) => {
+        let value = checkError(input)
+        let element = document.getElementById(value)
+        let valueIn = input.value
+        valueIn.length < 9 ? element.innerHTML = `Введите корректное ${checkDick(value)}` :  element.innerHTML = ''
+    })
+}
+
+

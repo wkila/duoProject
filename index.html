@@ -242,9 +242,18 @@
                 </div>
                 <form action="" class="form-context">
                     <div class="container-form">
-                        <input type="text" placeholder="Full Name">
-                        <input type="text" placeholder="Email@example.com" name="" id="">
-                        <textarea name="" id="" placeholder="Type message Here" style="grid-column-start: 1;grid-column-end: 3;"></textarea>
+                        <div class="block-input">
+                            <input type="text" class="input name" placeholder="Full Name">
+                            <span class="error-span" id="name"></span>
+                        </div>
+                        <div class="block-input">
+                            <input type="text" class="input email" placeholder="Email@example.com" name="" id="">
+                            <span class="error-span" id="email"></span>
+                        </div>
+                        <div class="block-input" style="grid-column-start: 1;grid-column-end: 3;">
+                            <textarea name="" class="textArea textar" id="" placeholder="Type message Here"></textarea>
+                            <span class="error-span" id="text"></span>
+                        </div>
                     </div>
                     <button class="send-btn" style="margin-bottom: 30px;">SEND</button>
                 </form>
